@@ -51,7 +51,6 @@ function IntakeForm() {
 
   const handleSubjectChange = e => {
     const { name, value} = e.target
-    console.log(intakePayload.subjects)
     setIntakePayload(prevState => { 
       if (!prevState.subjects.includes(value)) {
        return {...prevState, [name] : [...prevState.subjects, value]}
