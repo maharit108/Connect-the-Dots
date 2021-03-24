@@ -6,6 +6,8 @@ import './Login.css'
 
 function Login() {
   const [loginPayload, setLoginPayload] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirmPassword: ""
@@ -49,9 +51,11 @@ function Login() {
     <div className='login__container'>
       {displaySignIn ? (
         <div className='login__wrapper col-xs-12 col-sm-6'>
+          <div className='login__header'>
+            <h2>Login</h2>
+          </div>
           <Form onSubmit={onSignInSubmit}>
             <Form.Group controlId="email">
-              <Form.Label>Email</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -62,7 +66,6 @@ function Login() {
               />
             </Form.Group>
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
               <Form.Control
                 required
                 name="password"
@@ -72,16 +75,42 @@ function Login() {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="primary" type="submit"> Submit </Button>
+            <Button block variant="primary" type="submit"> Submit </Button>
           </Form>
           <br />
-          <p className='loginMsg' >No Account?<span className='loginToggle' onClick={loginToggle}> Register Now!!!</span></p>
+          <div className='login__footer'>
+            <span className='loginToggle'>Forgot Password?</span>
+            <span className='loginToggle' onClick={loginToggle}>Create an account</span>
+
+          </div>
        </div>
       ) : (
         <div className='login__wrapper col-xs-12 col-sm-6'>
+          <div className='login__header'>
+            <h2>Sign Up</h2>
+          </div>
           <Form onSubmit={onSignUpSubmit}>
+          <Form.Group controlId="firstName">
+              <Form.Control
+                required
+                type="text"
+                name="firstName"
+                value={loginPayload.firstName}
+                placeholder="First Name"
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="lastName">
+              <Form.Control
+                required
+                type="text"
+                name="lastName"
+                value={loginPayload.lastName}
+                placeholder="Last Name"
+                onChange={handleChange}
+              />
+            </Form.Group>
             <Form.Group controlId="email">
-              <Form.Label>Email</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -92,7 +121,6 @@ function Login() {
               />
             </Form.Group>
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
               <Form.Control
                 required
                 name="password"
@@ -103,7 +131,6 @@ function Login() {
               />
             </Form.Group>
             <Form.Group controlId="confirmPassword">
-              <Form.Label>Confirm Password</Form.Label>
               <Form.Control
                 required
                 name="confirmPassword"
@@ -113,10 +140,10 @@ function Login() {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="primary" type="submit"> Submit </Button>
+            <Button block variant="primary" type="submit"> Submit </Button>
           </Form>
           <br />
-          <p className='loginMsg'>Already have account?<span className='loginToggle' onClick={loginToggle}> Sign In</span></p>
+            <p className='signUp__footer'>Already have account?<span className='loginToggle' onClick={loginToggle}> Sign In</span></p>
        </div>
       )}
     </div>

@@ -1,0 +1,13 @@
+.Nav {
+  display: inline;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.Nav_group {
+  right: 0;
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+}
