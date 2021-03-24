@@ -1,5 +1,6 @@
 import './App.css';
 
+import Footer from './components/Footer/Footer.js'
 import Login from './components/Login/Login.js'
 import Header from './components/Header/Header.js'
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       {!user ? <Login setUser={setUser} /> : ''}
+      <Footer />
     </div>
   );
 }
