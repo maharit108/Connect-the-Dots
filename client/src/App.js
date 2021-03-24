@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './components/Footer/Footer.js'
 import Login from './components/Login/Login.js'
 import Header from './components/Header/Header.js'
+import IntakeForm from './components/IntakeForm/IntakeForm.js'
 
 function App() {
   const [user, setUser] = [null]
@@ -12,6 +13,7 @@ function App() {
       <Header />
       {!user ? <Login setUser={setUser} /> : ''}
       <Footer />
+      <IntakeForm />
     </div>
   );
 }

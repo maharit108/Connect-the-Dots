@@ -1,0 +1,40 @@
+.intake__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.intake__wrapper {
+  padding: 30px 80px 30px 80px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.1px;
+}
+
+.subjects__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.subjectDiv {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.1px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.removeSub {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 900;
+  color: firebrick;
+  cursor: pointer;
+}
