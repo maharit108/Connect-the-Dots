@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './Login.css'
 
-function Login() {
+function Login(props) {
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
@@ -28,9 +28,11 @@ function Login() {
   }
 
   const onSignInSubmit = e => {
+    const { setNewUser } = props
     e.preventDefault()
-    console.log(loginPayload)
+    console.log(loginPayload, props)
     resetState()
+    setNewUser(loginPayload)
   }
 
   const onSignUpSubmit = e => {
