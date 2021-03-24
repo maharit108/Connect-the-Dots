@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require('custom-env').env('staging')
 
-let MONGODB_URI = process.env.PROD_MONGODB || "";
+let MONGODB_URI = process.env.DB_HOST;
 
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
