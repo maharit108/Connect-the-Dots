@@ -78,7 +78,7 @@ function IntakeForm() {
   }
 
   return (
-    <div>
+    <div className='intake__container'>
       <div className='intake__wrapper col-xs-12 col-sm-6'>
         <Form onSubmit={onIntakeSubmit}>
           <Form.Group controlId="studentName">
