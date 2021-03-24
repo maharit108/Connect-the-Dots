@@ -11,13 +11,32 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.1px;
+  max-width: 500px;
 }
 
-.loginMsg {
+.login__header {
+  border-bottom: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login__header > h2 {
   text-align: center;
+}
+
+.login__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .loginToggle {
   color: blue;
   cursor: pointer;
+}
+
+.signUp__footer {
+  text-align: center;
 }
