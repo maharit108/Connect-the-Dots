@@ -30,7 +30,7 @@ function Login(props) {
   const onSignInSubmit = e => {
     const { setNewUser } = props
     e.preventDefault()
-    console.log(loginPayload, props)
+    console.log(loginPayload)
     resetState()
     setNewUser(loginPayload)
   }
