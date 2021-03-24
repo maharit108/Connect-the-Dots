@@ -20,7 +20,7 @@ const Header = props => {
         Tutors
         </Nav>
         <Nav className="Nav">
-        Login/Sign
+        Login/Sign in
         </Nav>
       </div>
     </Navbar>
