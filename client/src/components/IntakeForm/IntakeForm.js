@@ -5,9 +5,12 @@ import Button from 'react-bootstrap/Button'
 
 import { studentCreate } from './../../api/tutorStudent.js'
 
+import Modal from 'react-bootstrap/Modal'
+
 import './IntakeForm.css'
 
 function IntakeForm (props) {
+  const [modalShow, setModalShow] = useState(false)
   const [intakePayload, setIntakePayload] = useState({
     studentName: "",
     gradeLevel: "",
@@ -22,7 +25,7 @@ function IntakeForm (props) {
     list: "10",
     org: "10",
     resp: "10",
-    comments: ""
+    comments: "NA"
   })
 
 
@@ -77,10 +80,14 @@ function IntakeForm (props) {
     e.preventDefault()
     console.log(intakePayload)
     studentCreate(intakePayload)
-      .then(res => console.log(res) )
+      .then(res => setModalShow(true) )
       .catch(console.error)
     resetState()
   }
+
+  const handleClose = () => setModalShow(false)
+
+  const textShow = 'Profile has been submitted.'
 
   return (
     <div className='intake__container'>
@@ -278,6 +285,13 @@ function IntakeForm (props) {
             <Button className="Intake_button" variant='light' type="submit"> Submit </Button>
           </div>
         </Form>
+
+        <Modal show={modalShow} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter"
+        centered >
+          <Modal.Body>
+            <p className='textShow'>{textShow}</p>
+          </Modal.Body>
+        </Modal>
       </div>
     </div>
   )

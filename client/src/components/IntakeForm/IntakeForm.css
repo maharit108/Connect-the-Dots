@@ -86,3 +86,11 @@
   font-weight: bold;
   font-size: 13px;
 }
+
+.textShow {
+  background-color: #389084;
+  color: black;
+  font-size: 22px;
+  padding:40px;
+  border-radius: 10px;
+}
