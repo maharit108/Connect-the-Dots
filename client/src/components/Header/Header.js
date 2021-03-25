@@ -26,7 +26,7 @@ const Header = props => {
         Change Password
         </Nav.Link>
         <Nav.Link className="Nav N6" href='#'>
-        Login/Sign in
+        Sign in
         </Nav.Link>
         <Nav.Link className="Nav N7" href='#sign-out'>
         Sign Out

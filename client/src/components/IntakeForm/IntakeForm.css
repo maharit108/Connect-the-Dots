@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   background-color: #389084;
-  color: white;
+  color: #F5F5F5;
   padding: 30px 0 100px 0;
 }
 
@@ -22,11 +22,12 @@
   width: 500px;
   margin: 0 auto;
   padding: 20px;
+  padding-bottom: 90px;
 }
 
 .intake__mid {
   color: #389084;
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
   width: 100vw;
   padding: 20px;
 
@@ -46,7 +47,7 @@
 
 .subjectDiv {
   padding: 10px;
-  background-color: white;
+  background-color: #F5F5F5;
   color: black;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.1px;
@@ -74,7 +75,14 @@
 
 .emptyLine {
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
   height: 2px;
   margin-bottom: 20px;
+}
+
+.Intake_button {
+  background-color: #F5F5F5;
+  width: 125px;
+  font-weight: bold;
+  font-size: 13px;
 }

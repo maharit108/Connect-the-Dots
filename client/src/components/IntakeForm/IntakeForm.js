@@ -180,7 +180,6 @@ function IntakeForm () {
                   onChange={handleChange}
                 />
               </Form.Group>
-
               <Form.Group controlId="studentFeat__response">
                 <Form.Label>Sense of Responsibility<span className='rangeData'>{intakePayload.respons}</span></Form.Label>
                 <Form.Control
@@ -271,7 +270,7 @@ function IntakeForm () {
               />
             </Form.Group>
             <div className='emptyLine'></div>
-            <Button variant='light' type="submit"> Submit </Button>
+            <Button className="Intake_button" variant='light' type="submit"> Submit </Button>
           </div>
         </Form>
       </div>

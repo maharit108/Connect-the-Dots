@@ -22,7 +22,7 @@ function Tutor({ tutorData }) {
       {console.log(tutorData)}
       <div className='tutor__left'>
         <div className='tutor__img'>
-          <img src={tutorData.photo} alt='tutor' />       
+          <img src={tutorData.photo} alt='tutor' />
         </div>
       </div>
       <div className='tutor__right'>
@@ -30,7 +30,7 @@ function Tutor({ tutorData }) {
           <h2>{tutorData.name}</h2>
           <div className='tutor__btn'>
             {/* <Button variant='outline-success' onClick={onInfo}>Tutor info</Button> */}
-            <Button variant='success' className='connect tutor-btn' onClick={onConnect}>Connect</Button>
+            <Button variant='light' className='connect tutor-btn' onClick={onConnect}>Connect</Button>
           </div>
         </div>
         <div className='tutor__desc'>{tutorData.brief}</div>
