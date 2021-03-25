@@ -8,7 +8,7 @@
   margin-right: 40px;
   margin-left: 10px;
   font-weight: bold;
-  background-color: rgb(232, 255, 250, .6);
+  background-color: transparent;
 }
 
 .Nav_group {
@@ -65,5 +65,8 @@
   .Nav_group {
     position: absolute;
     right: 0;
+  }
+  .Nav {
+    background-color: rgb(232, 255, 250);
   }
 }

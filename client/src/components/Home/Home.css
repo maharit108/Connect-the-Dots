@@ -2,7 +2,7 @@
 
 .photo_hero {
   z-index: -3;
-  margin-top: -63px;
+  margin-top: -70px;
   height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,6 +31,7 @@
   width: 100%;
   background-color: #F5F5F5;
   border: none;
+  padding-bottom: 110px;
 }
 
 .need_help_header {

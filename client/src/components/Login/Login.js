@@ -100,7 +100,7 @@ function Login (props) {
           </div>
         </div>
       ) : (
-        <div className='login__wrapper col-xs-12 col-sm-6'>
+        <div className='sign_up login__wrapper col-xs-12 col-sm-6'>
           <div className='login__header'>
             <h2>Sign Up</h2>
           </div>

@@ -10,6 +10,7 @@ import IntakeForm from './components/IntakeForm/IntakeForm.js'
 import TutorList from './components/TutorList/TutorList.js'
 import SignOut from './components/SignOut/SignOut.js'
 import ChangePwd from './components/ChangePwd/ChangePwd';
+import Home from './components/Home/Home.js'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -22,7 +23,7 @@ function App() {
           {console.log(user,'app')}
       <Header user={user}/>
           <Route exact path='/' render={() => (
-            <Login setNewUser={setNewUser} />
+            <Home />
           )} />
           <Route path='/student-info' render={() => (
             <IntakeForm user={user} />
@@ -35,6 +36,9 @@ function App() {
           )} />
           <Route path='/change-password' render={() => (
             <ChangePwd user={user} setUser={setNewUser} />
+          )} />
+          <Route path='/sign-in' render={() => (
+            <Login setNewUser={setNewUser} />
           )} />
       <Footer />
     </div>
