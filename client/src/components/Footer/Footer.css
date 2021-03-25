@@ -19,6 +19,9 @@
 
 .Footer {
   background-color: #2C7593;
+  position:fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 .Footer_Nav {
