@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -33,10 +34,11 @@ function Login (props) {
   }
 
   const onSignInSubmit = e => {
-    const { setNewUser } = props
+    const { setNewUser, history } = props
     e.preventDefault()
     signIn(loginPayload)
       .then(res => setNewUser(res.data.user))
+      .then(() => history.push('/'))
       .catch(console.error)
     resetState()
   }
@@ -165,4 +167,4 @@ function Login (props) {
   )
 }
 
-export default Login
+export default withRouter(Login)
