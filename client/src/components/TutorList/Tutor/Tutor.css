@@ -45,6 +45,7 @@
 
 .modal-content {
     background-color: rgba(0,0,0,.0001) !important;
+    border: none;
 }
 
 .modal-body > img {
@@ -56,4 +57,13 @@
   background-color: #389084;
   border: none;
   color: #F5F5F5;
+}
+.find {
+  background-color: #F5F5F5;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2C7593;
+  width: 120px;
+  border: none;
+  float: right;
 }
