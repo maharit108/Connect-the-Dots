@@ -7,9 +7,11 @@ export const signUp = credentials => {
     url: apiUrl + '/sign-up',
     data: {
       credentials: {
+        firstName: credentials.firstName,
+        lastName: credentials.lastName,
         email: credentials.email,
         password: credentials.password,
-        password_confirmation: credentials.passwordConfirmation
+        password_confirmation: credentials.password_confirmation
       }
     }
   })
@@ -39,6 +41,7 @@ export const signOut = user => {
 }
 
 export const changePassword = (passwords, user) => {
+  console.log(user,passwords, 'aaa')
   return axios({
     url: apiUrl + '/change-password',
     method: 'PATCH',

@@ -7,9 +7,9 @@ import Modal from 'react-bootstrap/Modal'
 
 function Tutor({ tutorData }) {
   const [modalShow, setModalShow] = useState(false)
-  const onInfo = e => (
-    console.log('info')
-  )
+  // const onInfo = e => (
+  //   console.log('info')
+  // )
 
   const onConnect = e => (
     setModalShow(true)
@@ -29,7 +29,7 @@ function Tutor({ tutorData }) {
         <div className='tutor__head'>
           <h2>{tutorData.name}</h2>
           <div className='tutor__btn'>
-            <Button variant='outline-success' onClick={onInfo}>Tutor info</Button>
+            {/* <Button variant='outline-success' onClick={onInfo}>Tutor info</Button> */}
             <Button variant='success' className='connect tutor-btn' onClick={onConnect}>Connect</Button>
           </div>
         </div>
@@ -41,7 +41,7 @@ function Tutor({ tutorData }) {
       <Modal.Body>
         <img src={MessageSent} alt='submitted' />
       </Modal.Body>
-    </Modal>
+      </Modal>
 
     </div>
   )
