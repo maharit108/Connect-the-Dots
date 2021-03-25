@@ -8,6 +8,7 @@ import './Login.css'
 import { signUp, signIn } from './../../api/auth.js'
 
 function Login (props) {
+  const { history } = props
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
@@ -38,7 +39,7 @@ function Login (props) {
     e.preventDefault()
     signIn(loginPayload)
       .then(res => setNewUser(res.data.user))
-      .then(() => history.push('/'))
+      .then(() => history.push('/student-info'))
       .catch(console.error)
     resetState()
   }
@@ -53,6 +54,7 @@ function Login (props) {
           console.log('signup-complete')
           setNewUser(res.data.user)
         })
+        .then(() => history.push('/student-info'))
         .catch(console.error)
     } else {
       console.log('Password Dont Match')

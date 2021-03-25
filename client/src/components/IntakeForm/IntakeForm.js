@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+import { studentCreate } from './../../api/tutorStudent.js'
+
 import './IntakeForm.css'
 
-function IntakeForm () {
+function IntakeForm (props) {
   const [intakePayload, setIntakePayload] = useState({
     studentName: "",
     gradeLevel: "",
@@ -74,6 +76,9 @@ function IntakeForm () {
   const onIntakeSubmit = e => {
     e.preventDefault()
     console.log(intakePayload)
+    studentCreate(intakePayload)
+      .then(res => console.log(res) )
+      .catch(console.error)
     resetState()
   }
 
