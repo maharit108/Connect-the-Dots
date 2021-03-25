@@ -1,0 +1,103 @@
+/* colors F5F5F5 BBD5DE 2C7593 90C9C1 389084 */
+
+.photo_hero {
+  z-index: -3;
+  margin-top: -63px;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../img/landingimage.png');
+}
+
+.photo_hero_header {
+  margin-left: 40px;
+  padding-top: 320px;
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.photo_hero_button {
+  font-weight: bold;
+  margin-left: 40px;
+  font-size: 12px;
+  width: 120px;
+  background-color:#389084;
+  border: none;
+}
+
+.need_help {
+  width: 100%;
+  background-color: #F5F5F5;
+  border: none;
+}
+
+.need_help_header {
+  background-color: #F5F5F5;
+  padding: 70px;
+  padding-left: 125px;
+  right: 0;
+}
+
+.landing_parent {
+  position: relative;
+}
+
+.FAQ {
+  font-weight: bold;
+  font-size: 12px;
+  width: 100px;
+  margin-top: 100px;
+  background-color:#389084;
+  border: none;
+}
+
+.testomonials {
+  background-color: #F5F5F5;
+  border: none;
+  margin: 10px;
+  box-shadow: 2px 2px 5px #86b5ae;
+}
+
+.CardColumns {
+  left: 0;
+  right: 0;
+  background-color: #90C9C1;
+}
+
+.cards_background {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left:30px;
+  margin-right: 50px;
+
+}
+
+.card_p {
+  font-size: 12px;
+  margin: 20px;
+}
+
+.card_header {
+  text-align: center;
+  color: #F5F5F5;
+  font-weight: bold;
+}
+
+.card_button_div {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card_button {
+  width: 125px;
+  font-weight: bold;
+  background-color: #F5F5F5;
+  color: #2C7593;
+  border: 2px solid #2C7593;
+  border-radius: 3px;
+  font-size: 12px;
+  height: 35px;
+}
