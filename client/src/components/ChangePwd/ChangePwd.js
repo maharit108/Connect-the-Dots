@@ -13,17 +13,18 @@ function ChangePassword(props) {
     newPassword: ''
   })
       
-  const handleChange = e => setpwdData({[e.target.name]: e.target.value})
+  const handleChange = e => setpwdData(prevState => ({ ...prevState, [e.target.name]: e.target.value }))
 
   const onChangePwd = e => {
+    console.log(pwdData, 'chp')
     e.preventDefault()
-    const { history, user } = props
+    const { history, user} = props
 
-    changePassword(pwdData, user)
+    changePassword(pwdData, user.userData)
       .then(() => console.log('pwd changed'))
+      .then(() => setpwdData({oldPassword: '', newPassword: ''}))
       .then(() => history.push('/'))
       .catch(console.error)
-      .finally(setpwdData({ oldPassword: '', newPassword: '' }))
   }
 
   return (
