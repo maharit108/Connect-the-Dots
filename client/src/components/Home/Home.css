@@ -102,3 +102,15 @@
   font-size: 12px;
   height: 35px;
 }
+
+@media only screen and (max-width: 764px) {
+  .FAQ {
+    position: relative;
+    margin-top: -200px;
+    margin-left: 380px;
+    z-index: 10;
+  }
+  .need_help {
+    padding-bottom: 210px;
+  }
+}
