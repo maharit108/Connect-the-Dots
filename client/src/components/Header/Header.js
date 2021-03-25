@@ -1,27 +1,26 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import './Header.css'
 
 const Header = props => {
   return (
+
     <Navbar>
-      <Navbar.Brand>
-      Logo
-      </Navbar.Brand>
+      <Navbar.Brand href='#'>Logo</Navbar.Brand>
       <div className="Nav_group">
         <Nav className="Nav">
         About
         </Nav>
-        <Nav className="Nav">
+        <Nav.Link className="Nav" href='#student-info'>
         Schools
-        </Nav>
-        <Nav className="Nav">
+        </Nav.Link>
+        <Nav.Link className="Nav" href='#tutors'>
         Tutors
-        </Nav>
-        <Nav className="Nav">
+        </Nav.Link>
+        <Nav.Link className="Nav" href='/'>
         Login/Sign in
-        </Nav>
+        </Nav.Link>
       </div>
     </Navbar>
   )
