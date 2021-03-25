@@ -15,6 +15,10 @@ import Home from "./components/Home/Home.js";
 function App() {
   const [user, setUser] = useState(null);
 
+  const clearUser = () => {
+    setUser(null);
+  };
+
   const setNewUser = (userData) => setUser({ userData });
   return (
     <div className="App">
@@ -25,7 +29,7 @@ function App() {
       <Route path="/tutors" render={() => <TutorList user={user} />} />
       <Route
         path="/sign-out"
-        render={() => <SignOut user={user} setUser={setNewUser} />}
+        render={() => <SignOut user={user}  clearUser={clearUser} />}
       />
       <Route
         path="/change-password"
@@ -34,7 +38,7 @@ function App() {
       <Route path="/sign-in" render={() => <Login setNewUser={setNewUser} />} />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

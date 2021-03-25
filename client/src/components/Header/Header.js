@@ -25,17 +25,20 @@ const Header = (props) => {
         <Nav.Link className="Nav N4" href="#tutors">
           Tutors
         </Nav.Link>
-        <Nav.Link className="Nav N5" href="#change-password">
-          Change Password
-        </Nav.Link>
+
         {!user ? (
           <Nav.Link className="Nav N6" href="#sign-in">
             Sign in
           </Nav.Link>
         ) : (
-          <Nav.Link className="Nav N7" href="#sign-out">
-            Sign Out
-          </Nav.Link>
+          <>
+            <Nav.Link className="Nav N5" href="#change-password">
+              Change Password
+            </Nav.Link>
+            <Nav.Link className="Nav N7" href="#sign-out">
+              Sign Out
+            </Nav.Link>
+          </>
         )}
       </Navbar.Collapse>
     </Navbar>
