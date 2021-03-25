@@ -55,11 +55,11 @@ function TutorList() {
         <h2>Criteria</h2>
         <div className='stdData__wrap'>
           <h3 className='stdPrompt'>Grade</h3>
-          <input type='text' className='stdData' placeholder='5' value={grade} onChange={handleGrade}></input>
+          <input required type='text' className='stdData' placeholder='5' value={grade} onChange={handleGrade}></input>
         </div>
         <div className='stdData__wrap'>
           <h3 className='stdPrompt'>Subject</h3>
-          <input type='text' className='stdData' placeholder='Maths' value={subject} onChange={handleSubject}></input>
+          <input required type='text' className='stdData' placeholder='Maths' value={subject} onChange={handleSubject}></input>
         </div>
         <Button className="find" onClick={findTutor}>Find a Tutor</Button>
       </div>
