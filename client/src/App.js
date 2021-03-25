@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 
 import React, {useState} from 'react'
 import { Route } from 'react-router-dom'
@@ -36,7 +36,7 @@ function App() {
           <Route path='/change-password' render={() => (
             <ChangePwd user={user} setUser={setNewUser} />
           )} />
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
