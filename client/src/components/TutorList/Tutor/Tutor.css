@@ -36,3 +36,18 @@
   text-align: justify;
   text-justify: inter-word;
 }
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,.0001) !important;
+}
+
+.modal-body > img {
+  object-fit: contain;
+  width: 400px;
+}

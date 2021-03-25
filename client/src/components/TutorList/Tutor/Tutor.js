@@ -1,17 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import Button from 'react-bootstrap/Button'
 import './Tutor.css'
+import MessageSent from './../../../static/MessageSent.png'
+import Modal from 'react-bootstrap/Modal'
 
 function Tutor({ tutorData }) {
-
+  const [modalShow, setModalShow] = useState(false)
   const onInfo = e => (
     console.log('info')
   )
 
   const onConnect = e => (
-    console.log('connect')
+    setModalShow(true)
   )
+
+  const handleClose = () => setModalShow(false)
 
   return (
     <div className='tutor__container'>
@@ -31,6 +35,14 @@ function Tutor({ tutorData }) {
         </div>
         <div className='tutor__desc'>{tutorData.brief}</div>
       </div>
+
+      <Modal show={modalShow} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter"
+      centered >
+      <Modal.Body>
+        <img src={MessageSent} alt='submitted' />
+      </Modal.Body>
+    </Modal>
+
     </div>
   )
 }
