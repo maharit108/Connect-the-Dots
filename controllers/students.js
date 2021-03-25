@@ -1,7 +1,7 @@
 const db = require("../db/connection");
-const Student = require("../models/students");
+const Student = require("../models/student");
 
-db.on("error", console.bind(console, "MongoDB connection error"));
+db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 const getStudents = async (req, res) => {
   try {
