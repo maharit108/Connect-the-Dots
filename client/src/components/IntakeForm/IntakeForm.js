@@ -10,6 +10,7 @@ import Modal from 'react-bootstrap/Modal'
 import './IntakeForm.css'
 
 function IntakeForm (props) {
+  const { user } = props
   const [modalShow, setModalShow] = useState(false)
   const [intakePayload, setIntakePayload] = useState({
     studentName: "",
@@ -87,7 +88,7 @@ function IntakeForm (props) {
 
   const handleClose = () => setModalShow(false)
 
-  const textShow = 'Profile has been submitted.'
+  const textShow = () => ( user ? (<p>Profile has been submitted.</p>) : (<><p>Profile has been submitted.</p><p>Sign In to See Tutors.</p></> ) )
 
   return (
     <div className='intake__container'>
@@ -289,7 +290,7 @@ function IntakeForm (props) {
         <Modal show={modalShow} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter"
         centered >
           <Modal.Body>
-            <p className='textShow'>{textShow}</p>
+            <div className='textShow'>{textShow()}</div>
           </Modal.Body>
         </Modal>
       </div>
