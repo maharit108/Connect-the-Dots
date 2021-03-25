@@ -8,7 +8,7 @@ const Tutor = new Schema(
     education: { type: String, required: true }, // proof of teaching ability
     description: { type: String, required: false },
     backgroundCheck: { type: Boolean, required: true }, // crimianl background check as part of being a sponsored tutor
-    employeer: {type: String, required: true}, // small business to possibly be advertiesd and proof tutor is a worker
+    employer: {type: String, required: true}, // small business to possibly be advertiesd and proof tutor is a worker
     email: {type: String, required: true}, // to make contact
   },
   {
