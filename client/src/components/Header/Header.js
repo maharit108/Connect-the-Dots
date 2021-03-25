@@ -12,8 +12,8 @@ const Header = props => {
       </Navbar.Brand>
       <Navbar.Toggle expand="md" className="Navbar_Toggle" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="Nav_group">
-        <Button className="Nav_button N1">Find a Tutor</Button>
-        <Nav.Link className="Nav N2">
+        <Button href='#student-info' className="Nav_button N1">Find a Tutor</Button>
+        <Nav.Link href="/" className="Nav N2">
         About
         </Nav.Link>
         <Nav.Link className="Nav N3" href='#student-info'>
