@@ -5,11 +5,11 @@ import { signOut } from "../../api/auth.js";
 import "./SignOut.css";
 
 function SignOut(props) {
-  const { history, setUser, user } = props;
+  const { history, clearUser, user } = props;
 
   useEffect(() => {
     signOut(user.userData)
-      .then(() => setUser(null))
+      .then(() => clearUser())
       .catch(console.error)
       .finally(() => history.push("/"));
   }, []);
