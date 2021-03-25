@@ -13,7 +13,7 @@ const Home = () => {
     <div className="landing_parent">
       <div className="photo_hero">
         <h1 className="photo_hero_header">Find the best local tutors to <br/>impact your student's success.</h1>
-        <Button className='photo_hero_button'>Find A Tutor</Button>
+        <Button href='#student-info' className='photo_hero_button'>Find A Tutor</Button>
       </div>
       <div className="CardColumns">
         <div className='cards_background'>

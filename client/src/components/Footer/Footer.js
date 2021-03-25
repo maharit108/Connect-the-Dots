@@ -10,7 +10,7 @@ const Footer = props => {
     <Navbar.Brand className="footer_logo" href="/">
     Connect <br /> The Dots
     </Navbar.Brand>
-      <Button className="Footer_button F1">Find a Tutor</Button>
+      <Button href='#student-info'className="Footer_button F1">Find a Tutor</Button>
       <ListGroup.Item className="Footer_Nav F2">
       About
       </ListGroup.Item>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -7,6 +8,7 @@ import './Login.css'
 import { signUp, signIn } from './../../api/auth.js'
 
 function Login (props) {
+  const { history } = props
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
@@ -33,10 +35,11 @@ function Login (props) {
   }
 
   const onSignInSubmit = e => {
-    const { setNewUser } = props
+    const { setNewUser, history } = props
     e.preventDefault()
     signIn(loginPayload)
       .then(res => setNewUser(res.data.user))
+      .then(() => history.push('/student-info'))
       .catch(console.error)
     resetState()
   }
@@ -51,6 +54,7 @@ function Login (props) {
           console.log('signup-complete')
           setNewUser(res.data.user)
         })
+        .then(() => history.push('/student-info'))
         .catch(console.error)
     } else {
       console.log('Password Dont Match')
@@ -165,4 +169,4 @@ function Login (props) {
   )
 }
 
-export default Login
+export default withRouter(Login)
