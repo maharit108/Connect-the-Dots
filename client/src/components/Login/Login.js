@@ -46,7 +46,7 @@ function Login (props) {
 
   const onSignUpSubmit = e => {
     e.preventDefault()
-    const { setNewUser } = props
+    const { setNewUser, history } = props
     if (loginPayload.password === loginPayload.password_confirmation) {
       signUp(loginPayload)
         .then(res => signIn(loginPayload))
