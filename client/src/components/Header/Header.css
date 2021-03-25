@@ -4,22 +4,25 @@
   font-size: 10px;
   /* display: inline; */
   margin: 10px;
+  color: black;
   margin-right: 40px;
   margin-left: 10px;
   font-weight: bold;
+  background-color: rgb(232, 255, 250, .6);
 }
 
 .Nav_group {
-  right: 0;
   display: inline;
+  position:absolute;
+  right: 0;
   margin-left: 15%;
   margin-right: 5px;
-  position: absolute;
 }
 
 .logo {
+  position: absolute;
   text-transform: uppercase;
-  color: #F5F5F5 !important;
+  color: black !important;
   font-size: 12px;
   text-align: center;
   font-weight: bold;
@@ -27,6 +30,7 @@
 
 .Navbar_bg {
   z-index: 3;
+  height: 70px;
   background-color: rgb(232, 255, 250, .6);
 }
 
@@ -39,21 +43,27 @@
   box-shadow: 1px 1px 10px #82b5ae;
   border: 2px solid #2C7593;
   border-radius: 3px;
-  width: 120px;
+  width: 125px;
   font-size: 12px;
 }
+.Navbar_Toggle {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  border: none;
+  background-size: cover;
+}
 
-@media only screen and (max-width: 764px) {
-  .Nav_group {
-    position: static;
-    margin-left: -10px;
-  }
+@media only screen and (max-width: 1000px) {
   .logo {
     color: black !important;
   }
-}
-
-.Navbar_Toggle {
-  border: none;
-  background-size: cover;
+  .Nav_button {
+    margin-top: 255px;
+    margin-right: 70px;
+  }
+  .Nav_group {
+    position: absolute;
+    right: 0;
+  }
 }
