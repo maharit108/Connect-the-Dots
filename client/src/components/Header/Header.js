@@ -18,8 +18,14 @@ const Header = props => {
         <Nav.Link className="Nav" href='#tutors'>
         Tutors
         </Nav.Link>
-        <Nav.Link className="Nav" href='/'>
+        <Nav.Link className="Nav" href='#change-password'>
+        Change Password
+        </Nav.Link>
+        <Nav.Link className="Nav" href='#'>
         Login/Sign in
+        </Nav.Link>
+        <Nav.Link className="Nav" href='#sign-out'>
+        Sign Out
         </Nav.Link>
       </div>
     </Navbar>

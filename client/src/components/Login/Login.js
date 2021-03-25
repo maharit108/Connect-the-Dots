@@ -4,22 +4,26 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './Login.css'
 
+import { signUp, signIn } from './../../api/auth.js'
+
 function Login (props) {
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    password_confirmation: ""
   })
 
   const [displaySignIn, setDisplaySignIn] = useState(true)
 
   const resetState = () => {
     setLoginPayload({
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      password_confirmation: ""
     })
   }
 
@@ -31,17 +35,25 @@ function Login (props) {
   const onSignInSubmit = e => {
     const { setNewUser } = props
     e.preventDefault()
-    console.log(loginPayload)
+    signIn(loginPayload)
+      .then(res => setNewUser(res.data.user))
+      .catch(console.error)
     resetState()
-    setNewUser(loginPayload)
   }
 
   const onSignUpSubmit = e => {
     e.preventDefault()
-    if (loginPayload.password === loginPayload.confirmPassword) {
-      console.log(loginPayload)
+    const { setNewUser } = props
+    if (loginPayload.password === loginPayload.password_confirmation) {
+      signUp(loginPayload)
+        .then(res => signIn(loginPayload))
+        .then(res => {
+          console.log('signup-complete')
+          setNewUser(res.data.user)
+        })
+        .catch(console.error)
     } else {
-      console.log('error')
+      console.log('Password Dont Match')
     }
     resetState()
   }
@@ -133,11 +145,11 @@ function Login (props) {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Form.Group controlId="confirmPassword">
+            <Form.Group controlId="password_confirmation">
               <Form.Control
                 required
-                name="confirmPassword"
-                value={loginPayload.confirmPassword}
+                name="password_confirmation"
+                value={loginPayload.password_confirmation}
                 type="password"
                 placeholder="Confirm Password"
                 onChange={handleChange}
