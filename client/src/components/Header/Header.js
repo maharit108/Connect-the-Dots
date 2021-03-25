@@ -22,9 +22,6 @@ const Header = (props) => {
         <Nav.Link className="Nav N3" href="#student-info">
           Schools
         </Nav.Link>
-        <Nav.Link className="Nav N4" href="#tutors">
-          Tutors
-        </Nav.Link>
 
         {!user ? (
           <Nav.Link className="Nav N6" href="#sign-in">
@@ -32,6 +29,9 @@ const Header = (props) => {
           </Nav.Link>
         ) : (
           <>
+            <Nav.Link className="Nav N4" href="#tutors">
+              Tutors
+            </Nav.Link>
             <Nav.Link className="Nav N5" href="#change-password">
               Change Password
             </Nav.Link>
