@@ -6,6 +6,24 @@ import Button from 'react-bootstrap/Button'
 
 function TutorList() {
   const [tutorData, setTutorData] = useState([])
+  const [grade, setGrade] = useState('')
+  const [subject, setSubject] = useState('')
+
+  const handleGrade = e => {
+    const { value } = e.target
+    setGrade({grade: value })
+  }
+
+  const handleSubject = e => {
+    const { value } = e.target
+    setSubject({subject: value })
+  }
+
+  const findTutor = e => {
+    e.preventDefault()
+    console.log(grade, subject)
+  }
+
 
   useEffect(() => {
     const data = [
@@ -39,13 +57,13 @@ function TutorList() {
         <h2>Criteria</h2>
         <div className='stdData__wrap'>
           <h3 className='stdPrompt'>Grade</h3>
-          <h3 className='stdData'>5th</h3>
+          <input type='text' className='stdData' placeholder='5' value={grade} onChange={handleGrade}></input>
         </div>
         <div className='stdData__wrap'>
           <h3 className='stdPrompt'>Subject</h3>
-          <h3 className='stdData'>Math</h3>
+          <input type='text' className='stdData' placeholder='Maths' value={subject} onChange={handleSubject}></input>
         </div>
-        <Button className="find">Find a Tutor</Button>
+        <Button className="find" onClick={findTutor}>Find a Tutor</Button>
       </div>
       <div className='tutorList__main'>
         <h3>Showing Best {tutorData.length} matches</h3>
