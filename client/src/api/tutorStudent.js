@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const tutorIndex = user => {
   return axios({
-    url: apiUrl + '/tutors',
+    url: apiUrl + '/api/tutors',
     method: 'GET'
   })
 }
