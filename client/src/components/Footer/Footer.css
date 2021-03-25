@@ -19,7 +19,7 @@
 
 .Footer {
   background-color: #2C7593;
-  position:fixed;
+  position:absolute;
   bottom: 0;
   width: 100vw;
 }

@@ -51,3 +51,9 @@
   object-fit: contain;
   width: 400px;
 }
+
+.connect {
+  background-color: #389084;
+  border: none;
+  color: #F5F5F5;
+}
