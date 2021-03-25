@@ -1,0 +1,17 @@
+.tutorlist__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  padding: 30px;
+}
+
+.tutorList__left {
+  margin: 54px 10px 0 30px;
+  width: 300px;
+  height: 600px;
+  color: #389084;
+  background-color: rgba(144,201,193, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+}

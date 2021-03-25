@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './Login.css'
 
-function Login(props) {
+function Login (props) {
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
@@ -12,6 +12,7 @@ function Login(props) {
     password: "",
     confirmPassword: ""
   })
+
   const [displaySignIn, setDisplaySignIn] = useState(true)
 
   const resetState = () => {
@@ -23,8 +24,8 @@ function Login(props) {
   }
 
   const handleChange = e => {
-    const {name, value} = e.target
-    setLoginPayload(prevState => ({...prevState, [name] : value}))
+    const { name, value } = e.target
+    setLoginPayload(prevState => ({ ...prevState, [name]: value }))
   }
 
   const onSignInSubmit = e => {
@@ -85,14 +86,14 @@ function Login(props) {
             <span className='loginToggle' onClick={loginToggle}>Create an account</span>
 
           </div>
-       </div>
+        </div>
       ) : (
         <div className='login__wrapper col-xs-12 col-sm-6'>
           <div className='login__header'>
             <h2>Sign Up</h2>
           </div>
           <Form onSubmit={onSignUpSubmit}>
-          <Form.Group controlId="firstName">
+            <Form.Group controlId="firstName">
               <Form.Control
                 required
                 type="text"
@@ -145,8 +146,8 @@ function Login(props) {
             <Button block variant="primary" type="submit"> Submit </Button>
           </Form>
           <br />
-            <p className='signUp__footer'>Already have account?<span className='loginToggle' onClick={loginToggle}> Sign In</span></p>
-       </div>
+          <p className='signUp__footer'>Already have account?<span className='loginToggle' onClick={loginToggle}> Sign In</span></p>
+        </div>
       )}
     </div>
   )

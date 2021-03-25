@@ -8,7 +8,6 @@ const Student = new Schema(
     subject: { type: Array, required: true }, // math, science, english
     parentName: { type: String, requuired: true },
     parentEmail: { type: String, required: true }, // contact informtion for students parents to make contact
-    // sponsorID: { type: String, required: true }, // sponsor id would come from logged in user account to tie student to user account. 
     rel: { type: String, required: true },
     respons: { type: String, required: true },
     effort: { type: String, required: true },

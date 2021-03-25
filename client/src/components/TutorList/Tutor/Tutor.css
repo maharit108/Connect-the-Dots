@@ -1,0 +1,53 @@
+.tutor__container {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0.5px 4px #389084, 0 0.5px;
+  margin: 20px;
+}
+
+.tutor__img >img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tutor__img {
+  margin-right: 40px;
+}
+
+.tutor__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.tutor-btn {
+  margin-left: 20px;
+}
+
+.tutor__desc {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,.0001) !important;
+}
+
+.modal-body > img {
+  object-fit: contain;
+  width: 400px;
+}
