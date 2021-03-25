@@ -1,13 +1,59 @@
+
 .Nav {
-  display: inline;
-  margin-right: 5px;
-  margin-left: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  /* display: inline; */
+  margin: 10px;
+  margin-right: 40px;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .Nav_group {
   right: 0;
   display: inline;
-  margin-left: 5px;
+  margin-left: 15%;
   margin-right: 5px;
   position: absolute;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: #F5F5F5 !important;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Navbar_bg {
+  z-index: 3;
+  background-color: rgb(232, 255, 250, .6);
+}
+
+.Nav_button {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  background-color: #2C7593;
+  color: #F5F5F5;
+  box-shadow: 1px 1px 10px #82b5ae;
+  border: 2px solid #2C7593;
+  border-radius: 3px;
+  width: 120px;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 764px) {
+  .Nav_group {
+    position: static;
+    margin-left: -10px;
+  }
+  .logo {
+    color: black !important;
+  }
+}
+
+.Navbar_Toggle {
+  border: none;
+  background-size: cover;
 }
