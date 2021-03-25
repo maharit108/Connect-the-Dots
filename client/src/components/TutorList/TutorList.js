@@ -10,20 +10,34 @@ function TutorList() {
   const [tutorData, setTutorData] = useState([])
   const [grade, setGrade] = useState('')
   const [subject, setSubject] = useState('')
+  const [sendData, setSendData] = useState([])
 
   const handleGrade = e => {
     const { value } = e.target
-    setGrade({grade: value })
+    setGrade(value)
   }
 
   const handleSubject = e => {
     const { value } = e.target
-    setSubject({subject: value })
+    setSubject(value)
   }
 
   const findTutor = e => {
     e.preventDefault()
-    console.log(grade, subject)
+    let dataGrade
+    console.log('sub', subject, grade)
+    if (tutorData  && grade && !subject ) {
+      dataGrade = tutorData.filter(tutor => tutor.grade === grade)
+      setSendData([...dataGrade])
+    } else if (tutorData && !grade && subject) {
+      dataGrade = tutorData.filter(tutor => tutor.subject.toUpperCase() === subject.toUpperCase())
+      setSendData([...dataGrade])
+    } else if (tutorData && grade && subject ) {
+      dataGrade = tutorData.filter(tutor => tutor.grade === grade && tutor.subject.toUpperCase() === subject.toUpperCase())
+      setSendData([...dataGrade])
+    } else {
+      setSendData([])
+    }
   }
 
 
@@ -32,6 +46,7 @@ function TutorList() {
       .then(res => setTutorData(res.data))
       .catch(console.error)
     
+      console.log(tutorData)
   }, [])
 
   return (
@@ -49,11 +64,14 @@ function TutorList() {
         <Button className="find" onClick={findTutor}>Find a Tutor</Button>
       </div>
       <div className='tutorList__main'>
-        <h3>Showing Best {tutorData.length} matches</h3>
+        <h3>Showing Best {sendData.length ? sendData.length : tutorData.length} matches</h3>
         <div className='tutorList__list'>
-          {tutorData.map((data, idx) => (
+          {sendData.length ? (sendData.map((data, idx) => (
             <Tutor key={idx} tutorData={data} />
-          ))}
+          ))) : (
+            tutorData.map((data, idx) => (
+            <Tutor key={idx} tutorData={data} />
+          )))}
         </div>
       </div>
     </div>

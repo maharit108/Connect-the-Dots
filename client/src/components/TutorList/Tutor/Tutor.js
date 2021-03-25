@@ -19,7 +19,6 @@ function Tutor({ tutorData }) {
 
   return (
     <div className='tutor__container'>
-      {console.log(tutorData)}
       <div className='tutor__left'>
         <div className='tutor__img'>
           <img src={tutorData.photo} alt='tutor' />
