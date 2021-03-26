@@ -7,6 +7,8 @@ import { changePassword } from '../../api/auth.js'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+import './ChangePwd.css'
+
 function ChangePassword(props) {
   const [pwdData, setpwdData] = useState({
     oldPassword: '',
@@ -28,8 +30,8 @@ function ChangePassword(props) {
   }
 
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+    <div className="pwd__container">
+      <div className="pwd__wrapper">
         <h3>Change Password</h3>
         <Form onSubmit={onChangePwd}>
           <Form.Group controlId="oldPassword">

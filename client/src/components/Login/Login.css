@@ -1,17 +1,19 @@
 .login__container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 85vh;
   background-color: whitesmoke;
+  min-height: 70vh;
 }
 
 .login__wrapper {
   padding: 30px 80px 30px 80px;
-  background-color: white;
+  background-color: rgba(144,201,193, 0.4);
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.1px;
   max-width: 500px;
+  margin: 20px auto;
 }
 
 .login__header {
@@ -41,6 +43,6 @@
   text-align: center;
 }
 
-.sign_up {
+/* .sign_up {
   margin-top: 60px;
-}
+} */

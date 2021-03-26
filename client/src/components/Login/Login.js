@@ -8,7 +8,7 @@ import './Login.css'
 import { signUp, signIn } from './../../api/auth.js'
 
 function Login (props) {
-  const { history } = props
+  const { setNewUser, history } = props
   const [loginPayload, setLoginPayload] = useState({
     firstName: "",
     lastName: "",
@@ -35,7 +35,6 @@ function Login (props) {
   }
 
   const onSignInSubmit = e => {
-    const { setNewUser, history } = props
     e.preventDefault()
     signIn(loginPayload)
       .then(res => setNewUser(res.data.user))
@@ -46,7 +45,6 @@ function Login (props) {
 
   const onSignUpSubmit = e => {
     e.preventDefault()
-    const { setNewUser, history } = props
     if (loginPayload.password === loginPayload.password_confirmation) {
       signUp(loginPayload)
         .then(res => signIn(loginPayload))
