@@ -8,7 +8,7 @@ const Header = (props) => {
   const { user } = props;
   return (
     <Navbar expand="lg" className="Navbar_bg">
-      <Navbar.Brand className="logo" href="/">
+      <Navbar.Brand className="logo" href="#">
         Connect <br /> The Dots
       </Navbar.Brand>
       <Navbar.Toggle
