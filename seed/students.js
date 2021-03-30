@@ -57,6 +57,7 @@ const main = async () => {
       comments:
         "The kid has heart and is willing to do the work, but gets knocked down really easily when he doesn't get an answer right and puts him off track.",
     },
+    
   ];
 
   await Student.deleteMany();
