@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hack-a-thon-serv4/working-title.git"
+    "url": "git+https://github.com/maharit108/Connect-the-Dots.git"
   },
   "keywords": [],
-  "author": "Matt McKnight",
+  "author": "codeMonkey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hack-a-thon-serv4/working-title/issues"
+    "url": "https://github.com/maharit108/Connect-the-Dots/issues"
   },
-  "homepage": "https://github.com/hack-a-thon-serv4/working-title#readme",
+  "homepage": "https://github.com/maharit108/Connect-the-Dots#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
