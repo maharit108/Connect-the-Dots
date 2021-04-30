@@ -1,5 +1,5 @@
 // creating a base name for the mongodb
-const mongooseBaseName = 'working-title'
+const mongooseBaseName = 'connectTheDots'
 
 // create the mongodb uri for development and test
 const database = {
