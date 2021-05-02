@@ -1,7 +1,4 @@
-const db = require("../db/connection");
 const Tutor = require("../models/tutor");
-
-db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 const getTutors = async (req, res) => {
   try {

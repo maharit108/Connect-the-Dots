@@ -12,7 +12,7 @@ function SignOut(props) {
       .then(() => clearUser())
       .catch(console.error)
       .finally(() => history.push("/"));
-  }, []);
+  });
 
   return "";
 }
